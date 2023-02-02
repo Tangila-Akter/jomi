@@ -19,10 +19,23 @@
         <form action="{{ url('upload_post') }}" method="post">
             @csrf
         <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Property title</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Property title">
+          </div>
             <div class="mb-3">
-                <label for="formFileMultiple" class="form-label">image</label>
+                <label for="formFileMultiple" class="form-label">Image:</label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple>
               </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Property price</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Property Price">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Property Details:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <input type="hidden" name="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" style="background-color:#41403e !important;" data-bs-dismiss="modal">Close</button>
@@ -47,6 +60,8 @@
         <h1 style="font-size: 30px;font-weight: 400;"> <b>name</b></h1>
         <p>property details. <br>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+
+        <p class="mb-2 mt-2"><b>Price:</b> </p>
         <span>Posted by ... <b></b></span>
         <div class="mb-6" style="margin-top: 7px;">
           <button type="submit" class="btn btn-primary" style="background-color: #0d6efd;" >Book Now</button>
@@ -66,6 +81,7 @@
         <h1 style="font-size: 30px;font-weight: 400;"> <b>name</b></h1>
         <p>property details. <br>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+          <p class="mb-2 mt-2"><b>Price:</b> </p>
         <span>Posted by ... <b></b></span>
         <div class="mb-6" style="margin-top: 7px;">
           <button type="submit" class="btn btn-primary" style="background-color: #0d6efd;" >Book Now</button>
@@ -85,6 +101,7 @@
         <h1 style="font-size: 30px;font-weight: 400;"> <b>name</b></h1>
         <p>property details. <br>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+          <p class="mb-2 mt-2"><b>Price:</b> </p>
         <span>Posted by ... <b></b></span>
         <div class="mb-6" style="margin-top: 7px;">
           <button type="submit" class="btn btn-primary" style="background-color: #0d6efd;" >Book Now</button>
