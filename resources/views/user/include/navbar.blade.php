@@ -29,7 +29,7 @@
                                                                 </li>
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37">
-                                                                    <a href="index.php/post-a-listing/index.html"
+                                                                    <a href="{{ url('/post') }}"
                                                                         class="wpr-menu-item wpr-pointer-item menu-link">Post
                                                                         a listing</a></li>
                                                                 <li

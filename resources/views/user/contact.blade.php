@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
-<head>
-    @include('user.include.head')
-</head>
 
 @extends('user.include.main')
 

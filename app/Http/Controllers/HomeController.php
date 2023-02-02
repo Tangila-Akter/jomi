@@ -61,4 +61,8 @@ class HomeController extends Controller
         $data->save();
         return redirect()->back();
     }
+
+    public function post(){
+        return view("user.post");
+    }
 }
