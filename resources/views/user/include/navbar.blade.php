@@ -42,16 +42,30 @@
                                                                     <a href="{{ url('/contact') }}"
                                                                         class="wpr-menu-item wpr-pointer-item menu-link">Contact</a>
                                                                 </li>
+                                                                {{-- @guest
                                                                 <li
                                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
                                                                     <a href="{{ url('register') }}"
                                                                         class="wpr-menu-item wpr-pointer-item menu-link">Sign
                                                                         in</a></li>
-
+                                                                @endguest --}}
+                                                                @if (Route::has('login'))
+                                                                @auth
                                                                         <li
                                                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
+                                                                        
                                                                         <a class="" ><x-app-layout></x-app-layout></a></li>
-                    
+                                                                        @else
+                                                    
+                                                                            @if (Route::has('register'))
+                                                                            <li
+                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
+                                                                    <a href="{{ url('register') }}"
+                                                                        class="wpr-menu-item wpr-pointer-item menu-link">Sign
+                                                                        in</a></li>
+                                                                            @endif
+                                                                        @endauth
+                                                                        @endif
                                                             </ul>
                                                         </nav>
                                                         <nav class="wpr-mobile-nav-menu-container">

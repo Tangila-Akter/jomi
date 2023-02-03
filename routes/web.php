@@ -20,6 +20,7 @@ Route::get('/home',[HomeController::class,'redirects'])->middleware('auth','veri
 Route::get("/contact", [HomeController::class, "contact"]);
 Route::post("/upload_contact", [HomeController::class, "upload_contact"]);
 Route::get("/post", [HomeController::class, "post"]);
+Route::post("/upload_post", [HomeController::class, "upload_post"]);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

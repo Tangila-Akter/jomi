@@ -13,7 +13,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
         </div>
         <form action="{{ url('upload_post') }}" method="post">
@@ -21,21 +21,32 @@
         <div class="modal-body">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Property title</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Property title">
+            <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Property title">
           </div>
             <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Image:</label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple>
+                <input name="image" class="form-control" type="file" id="formFileMultiple" multiple>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Property price</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Property Price">
+                <input type="text" name="price" class="form-control" id="exampleFormControlInput1" placeholder="Property Price">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Property for</label>
+                <select id="" name="type" class="form-control">
+                  <option >--Select option--</option>
+                  <option value="sell">Sell</option>
+                  <option value="buy">Buy</option>
+                  <option value="rent">Rent</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Property Details:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="details" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
-              <input type="hidden" name="">
+              <input type="hidden" name="" @auth value="{{Auth::user()->id}}" @endauth>
+              <input type="hidden" name="" @auth value="{{Auth::user()->email}}" @endauth>
+              <input type="hidden" name="" @auth value="{{Auth::user()->name}}" @endauth>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" style="background-color:#41403e !important;" data-bs-dismiss="modal">Close</button>

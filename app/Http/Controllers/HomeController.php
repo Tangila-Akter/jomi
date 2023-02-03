@@ -65,4 +65,7 @@ class HomeController extends Controller
     public function post(){
         return view("user.post");
     }
+    public function upload_post(){
+        return view("user.post");
+    }
 }
