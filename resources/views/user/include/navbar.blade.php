@@ -15,11 +15,11 @@
                                                     data-widget_type="wpr-nav-menu.default">
                                                     <div class="elementor-widget-container">
                                                         <nav class="wpr-nav-menu-container wpr-nav-menu-horizontal"
-                                                            data-trigger="hover">
+                                                            data-trigger="hover" >
                                                             <ul id="menu-1-2de6eaa" class="wpr-nav-menu">
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-39">
-                                                                    <a href="index.html" aria-current="page"
+                                                                    <a href="{{ url('/home') }}" aria-current="page"
                                                                         class="wpr-menu-item wpr-pointer-item wpr-active-menu-item menu-link">Home</a>
                                                                 </li>
                                                                 <li
@@ -29,12 +29,12 @@
                                                                 </li>
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37">
-                                                                    <a href="{{ url('/post') }}"
+                                                                    <a href="{{ url('/user_post') }}"
                                                                         class="wpr-menu-item wpr-pointer-item menu-link">Post
                                                                         a listing</a></li>
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36">
-                                                                    <a href="index.php/listing/index.html"
+                                                                    <a href="{{ url('/list') }}"
                                                                         class="wpr-menu-item wpr-pointer-item menu-link">Listing</a>
                                                                 </li>
                                                                 <li

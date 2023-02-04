@@ -18,8 +18,10 @@ use App\Http\Controllers\AdminController;
 Route::get('/',[HomeController::class,'index']);
 Route::get('/home',[HomeController::class,'redirects'])->middleware('auth','verified');
 Route::get("/contact", [HomeController::class, "contact"]);
+Route::get("/user_post", [HomeController::class, "cost"]);
 Route::post("/upload_contact", [HomeController::class, "upload_contact"]);
-Route::get("/post", [HomeController::class, "post"]);
+// Route::get("/post", [HomeController::class, "post"]);
+Route::get("/list", [HomeController::class, "list"]);
 Route::post("/upload_post", [HomeController::class, "upload_post"]);
 Route::get('/dashboard', function () {
     return view('dashboard');

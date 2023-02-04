@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Home;
 use App\Models\Contact;
+use App\Models\Property;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     /**
@@ -61,11 +63,35 @@ class HomeController extends Controller
         $data->save();
         return redirect()->back();
     }
-
-    public function post(){
-        return view("user.post");
+    public function cost(){
+        
+        $data = DB::table('properties')->where('user_id'== Auth::user()->id)->get();
+        return view("user.post", compact("data"));
     }
-    public function upload_post(){
-        return view("user.post");
+    
+    public function upload_post(Request $request){
+        $data = new Property;
+        $image=$request->image;
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('post',$imagename);
+        $data->image=$imagename;
+
+        // $image=$request->image;
+        //  $imagename=time().'.'.$image->getClientOriginalExtension() ;
+        //  $request->image->move('post',$image);
+        //  $data->image=$imagename;
+        $data->title=$request->title;
+        $data->price=$request->price;
+        $data->type=$request->type;
+        $data->details=$request->details;
+        $data->user_id=$request->user_id;
+        $data->user_email=$request->user_email;
+        $data->user_name=$request->user_name;
+        $data->save();
+        return redirect()->back()->with('message','Post Added Successfully');
+    }
+    public function list(){
+        $data=Property::all();
+        return view("user.list", compact("data"));
     }
 }
