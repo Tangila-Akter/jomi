@@ -64,8 +64,8 @@ class HomeController extends Controller
         return redirect()->back();
     }
     public function cost(){
-        
-        $data = DB::table('properties')->where('user_id'== Auth::user()->id)->get();
+        $user_id = Auth::user()->id;
+        $data=Property::where('user_id', $user_id)->get();
         return view("user.post", compact("data"));
     }
     

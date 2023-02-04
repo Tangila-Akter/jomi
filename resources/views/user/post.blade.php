@@ -18,7 +18,7 @@
     <button type="button" class="btn btn-warning mt-2 mb-2" style="background-color:#ffc107 !important; float: right !important;" data-bs-toggle="modal" data-bs-target="#exampleModal">
         + New Post
     </button>
-
+    <h1 style="font-size: 30px;font-weight: 400;" class="mb-2 mt-2"> <b>My posts</b></h1>
     <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
