@@ -79,7 +79,7 @@
                                                                 class="wpr-mobile-nav-menu">
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-39">
-                                                                    <a href="index.html" aria-current="page"
+                                                                    <a href="{{ url('/home') }}" aria-current="page"
                                                                         class="wpr-mobile-menu-item wpr-active-menu-item menu-link">Home</a>
                                                                 </li>
                                                                 <li
@@ -89,24 +89,36 @@
                                                                 </li>
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37">
-                                                                    <a href="index.php/post-a-listing/index.html"
+                                                                    <a href="{{ url('/user_post') }}"
                                                                         class="wpr-mobile-menu-item menu-link">Post a
                                                                         listing</a></li>
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36">
-                                                                    <a href="index.php/listing/index.html"
+                                                                    <a href="{{ url('/list') }}"
                                                                         class="wpr-mobile-menu-item menu-link">Listing</a>
                                                                 </li>
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35">
-                                                                    <a href="index.php/contact/index.html"
+                                                                    <a href="{{ url('/contact') }}"
                                                                         class="wpr-mobile-menu-item menu-link">Contact</a>
                                                                 </li>
+                                                                @if (Route::has('login'))
+                                                                @auth
+                                                                        <li
+                                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
+                                                                        
+                                                                        <a class="" ><x-app-layout></x-app-layout></a></li>
+                                                                        @else
+                                                    
+                                                                            @if (Route::has('register'))
                                                                 <li
                                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
                                                                     <a href="#"
                                                                         class="wpr-mobile-menu-item menu-link">Sign
                                                                         in</a></li>
+                                                                        @endif
+                                                                        @endauth
+                                                                        @endif
                                                             </ul>
                                                         </nav>
                                                     </div>

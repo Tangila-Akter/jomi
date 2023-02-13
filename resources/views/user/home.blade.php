@@ -105,65 +105,7 @@
                                                         sizes="(max-width: 1006px) 100vw, 1006px" />
                                                 </div>
                                             </div>
-                                            <section
-                                                class="elementor-section elementor-inner-section elementor-element elementor-element-20ba902 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
-                                                data-id="20ba902" data-element_type="section">
-                                                <div
-                                                    class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3af8f32"
-                                                        data-id="3af8f32" data-element_type="column">
-                                                        <div
-                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-729f0d4 elementor-align-justify elementor-invisible elementor-widget elementor-widget-button"
-                                                                data-id="729f0d4"
-                                                                data-element_type="widget"
-                                                                data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}"
-                                                                data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="#"
-                                                                            class="elementor-button-link elementor-button elementor-size-sm"
-                                                                            role="button">
-                                                                            <span
-                                                                                class="elementor-button-content-wrapper">
-                                                                                <span
-                                                                                    class="elementor-button-text">Buy
-                                                                                    Apartment</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-296b0a1"
-                                                        data-id="296b0a1" data-element_type="column">
-                                                        <div
-                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-c95cd27 elementor-align-justify elementor-invisible elementor-widget elementor-widget-button"
-                                                                data-id="c95cd27"
-                                                                data-element_type="widget"
-                                                                data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}"
-                                                                data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="#"
-                                                                            class="elementor-button-link elementor-button elementor-size-sm"
-                                                                            role="button">
-                                                                            <span
-                                                                                class="elementor-button-content-wrapper">
-                                                                                <span
-                                                                                    class="elementor-button-text">Buy
-                                                                                    Land</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
+                                            
                                         </div>
                                     </div>
                                     <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a3f7765"
@@ -197,58 +139,8 @@
                                                 data-id="f1a99f6" data-element_type="section">
                                                 <div
                                                     class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-56a608b"
-                                                        data-id="56a608b" data-element_type="column">
-                                                        <div
-                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-b5f6442 elementor-align-justify elementor-invisible elementor-widget elementor-widget-button"
-                                                                data-id="b5f6442"
-                                                                data-element_type="widget"
-                                                                data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}"
-                                                                data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="#"
-                                                                            class="elementor-button-link elementor-button elementor-size-sm"
-                                                                            role="button">
-                                                                            <span
-                                                                                class="elementor-button-content-wrapper">
-                                                                                <span
-                                                                                    class="elementor-button-text">Sell
-                                                                                    Apartment</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a620250"
-                                                        data-id="a620250" data-element_type="column">
-                                                        <div
-                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-192ed71 elementor-align-justify elementor-invisible elementor-widget elementor-widget-button"
-                                                                data-id="192ed71"
-                                                                data-element_type="widget"
-                                                                data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}"
-                                                                data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="#"
-                                                                            class="elementor-button-link elementor-button elementor-size-sm"
-                                                                            role="button">
-                                                                            <span
-                                                                                class="elementor-button-content-wrapper">
-                                                                                <span
-                                                                                    class="elementor-button-text">Sell
-                                                                                    Land</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
+                                                    
                                                 </div>
                                             </section>
                                         </div>
@@ -284,58 +176,8 @@
                                                 data-id="8426670" data-element_type="section">
                                                 <div
                                                     class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-80beff2"
-                                                        data-id="80beff2" data-element_type="column">
-                                                        <div
-                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-739982c elementor-align-justify elementor-invisible elementor-widget elementor-widget-button"
-                                                                data-id="739982c"
-                                                                data-element_type="widget"
-                                                                data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}"
-                                                                data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="#"
-                                                                            class="elementor-button-link elementor-button elementor-size-sm"
-                                                                            role="button">
-                                                                            <span
-                                                                                class="elementor-button-content-wrapper">
-                                                                                <span
-                                                                                    class="elementor-button-text">Rent
-                                                                                    Apartment</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7697e9f"
-                                                        data-id="7697e9f" data-element_type="column">
-                                                        <div
-                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-ac3d358 elementor-align-justify elementor-invisible elementor-widget elementor-widget-button"
-                                                                data-id="ac3d358"
-                                                                data-element_type="widget"
-                                                                data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}"
-                                                                data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="#"
-                                                                            class="elementor-button-link elementor-button elementor-size-sm"
-                                                                            role="button">
-                                                                            <span
-                                                                                class="elementor-button-content-wrapper">
-                                                                                <span
-                                                                                    class="elementor-button-text">Rent
-                                                                                    Land</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
+                                                    
                                                 </div>
                                             </section>
                                         </div>
@@ -356,14 +198,14 @@
 
                                                     <form role="search" method="get"
                                                         class="wpr-search-form"
-                                                        action="https://jomikhoj.com/">
+                                                        action="">
 
                                                         <div
                                                             class="wpr-search-form-input-wrap elementor-clearfix">
                                                             <input
                                                                 placeholder="Search for Apartment or Land ..."
                                                                 class="wpr-search-form-input"
-                                                                type="search" name="s"
+                                                                type="search" name="search"
                                                                 title="Search" value=""
                                                                 wpr-query-type="all" number-of-results="2"
                                                                 ajax-search="yes" number-of-words="30"
@@ -371,7 +213,7 @@
                                                                 show-view-result-btn=""
                                                                 view-result-text="View Results"
                                                                 exclude-without-thumb=""
-                                                                link-target="_self">
+                                                                link-target="">
 
                                                             <button class="wpr-search-form-submit"
                                                                 type="submit">
@@ -387,10 +229,11 @@
                                                     </div>
 
                                                 </div>
-                                            </div>
+                                                
                                         </div>
                                     </div>
                                 </div>
+                                
                             </section>
                         </div>
 

@@ -4,10 +4,7 @@
       <li class="nav-item profile">
         <div class="profile-desc">
           <div class="profile-pic">
-            <div class="count-indicator">
-              <img class="img-xs rounded-circle " src="{{ asset('admin/assets/images/faces/face15.jpg')}}" alt="">
-              <span class="count bg-success"></span>
-            </div>
+            
             <div class="profile-name">
               {{-- <h5 class="mb-0 font-weight-normal">{{ Auth::user()->name }}</h5> --}}
             </div>
@@ -52,7 +49,7 @@
       <li class="nav-item nav-category">
         <span class="nav-link">Navigation</span>
       </li>
-      <li class="nav-item menu-items">
+      {{-- <li class="nav-item menu-items">
         <a class="nav-link" href="index.html">
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
@@ -75,24 +72,40 @@
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
           </ul>
         </div>
-      </li>
+      </li> --}}
       <li class="nav-item menu-items">
-        <a class="nav-link" href="pages/forms/basic_elements.html">
+        <a class="nav-link" href="{{ url('/admin_account') }}">
           <span class="menu-icon">
             <i class="mdi mdi-playlist-play"></i>
           </span>
-          <span class="menu-title">Form Elements</span>
+          <span class="menu-title">User Management</span>
         </a>
       </li>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="pages/tables/basic-table.html">
+        <a class="nav-link" href="{{ url('/admin_post') }}">
           <span class="menu-icon">
             <i class="mdi mdi-table-large"></i>
           </span>
-          <span class="menu-title">Tables</span>
+          <span class="menu-title">Property list</span>
         </a>
       </li>
       <li class="nav-item menu-items">
+        <a class="nav-link" href="{{ url('/admin_list',Auth::user()->id) }}">
+          <span class="menu-icon">
+            <i class="mdi mdi-table-large"></i>
+          </span>
+          <span class="menu-title">Property Query</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{ url('/admin_contact') }}">
+          <span class="menu-icon">
+            <i class="mdi mdi-table-large"></i>
+          </span>
+          <span class="menu-title">Contact us</span>
+        </a>
+      </li>
+      {{-- <li class="nav-item menu-items">
         <a class="nav-link" href="pages/charts/chartjs.html">
           <span class="menu-icon">
             <i class="mdi mdi-chart-bar"></i>
@@ -133,6 +146,6 @@
           </span>
           <span class="menu-title">Documentation</span>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>

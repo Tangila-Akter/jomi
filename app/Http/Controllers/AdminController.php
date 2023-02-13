@@ -3,83 +3,77 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\User;
+use App\Models\Contact;
+use App\Models\Property;
+use App\Models\Lists;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+    public function admin_account(){
+        $data=User::all();
+        return view("admin.account", compact("data"));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    public function admin_upload(Request $request)
+     {
+         $user = new user;
+          $user->name=$request->name;
+          $user->email=$request->email;
+          $user->usertype=$request->usertype;
+          $user->email_verified_at=$request->email_verified_at;
+          $user->password=Hash::make($request->password);
+          $user->save();
+          return redirect()->back(); 
+     }
+     public function deleteadmin($id)
+     {
+         $data=user::find($id);
+         $data->delete();
+         return redirect()->back();
+     }
+     public function admin_post(){
+        $data=Property::all();
+        return view("admin.post", compact("data"));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function deletepost($id)
+     {
+         $data=Property::find($id);
+         $data->delete();
+         return redirect()->back();
+     }
+    public function admin_list(Request $request,$id)
     {
-        //
+        if(Auth::id()==$id)
+        {
+          
+        $data =DB::table('lists')
+            ->join('properties', 'lists.id', '=', 'properties.id')
+            ->get();
+        return view("admin.lists", compact('data'));
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Admin $admin)
+    else
     {
-        //
+        return redirect()->back();
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Admin $admin)
-    {
-        //
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Admin $admin)
-    {
-        //
+    public function deletelist($id)
+     {
+         $data=lists::find($id);
+         $data->delete();
+         return redirect()->back();
+     }
+    public function admin_contact(){
+        $data=Contact::all();
+        return view("admin.contact", compact("data"));
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Admin $admin)
-    {
-        //
-    }
+    public function deletecontact($id)
+     {
+         $data=Contact::find($id);
+         $data->delete();
+         return redirect()->back();
+     }
 }
