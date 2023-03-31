@@ -9,7 +9,7 @@
       <form action="">
       <label for="exampleDataList" class="form-label">Filter:</label>
       {{-- <span>Filter:</span> --}}
-<select id="" name="type" class="form-control">
+<select id="" type="search" name="option" class="form-control">
     <option >--Select option--</option>
     <option value="sell">Sell</option>
     <option value="buy">Buy</option>
@@ -17,7 +17,7 @@
   </select>
 
     </div>
-    <div class="col mt-4"><button>load</button>
+    <div class="col mt-4"><button type="submit">load</button>
     </form></div>
     <div class="col">
       

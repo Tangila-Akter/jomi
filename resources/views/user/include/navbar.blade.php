@@ -19,12 +19,12 @@
                                                             <ul id="menu-1-2de6eaa" class="wpr-nav-menu">
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-39">
-                                                                    <a href="{{ url('/home') }}" aria-current="page"
+                                                                    <a href="{{ url('/') }}" aria-current="page"
                                                                         class="wpr-menu-item wpr-pointer-item wpr-active-menu-item menu-link">Home</a>
                                                                 </li>
                                                                 <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38">
-                                                                    <a href="index.php/about/index.html"
+                                                                    <a href="{{ url('/user_about') }}"
                                                                         class="wpr-menu-item wpr-pointer-item menu-link">About</a>
                                                                 </li>
                                                                 <li

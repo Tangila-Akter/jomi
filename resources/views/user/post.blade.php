@@ -15,6 +15,16 @@
 
 @endif
 <div class="contener-fluid" style="margin: 0% 15% 0% 15%;">
+  @guest
+ 
+  <form action="{{ route('login') }}">
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button type="submit" class="btn btn-warning mt-2 mb-2" style="">+ New Post</button>
+</form>
+</div>
+  
+@endguest
+@auth
     <button type="button" class="btn btn-warning mt-2 mb-2" style="background-color:#ffc107 !important; float: right !important;" data-bs-toggle="modal" data-bs-target="#exampleModal">
         + New Post
     </button>
@@ -71,7 +81,8 @@
 
   
 </div>
-<div class="contener-fluid" style="margin: 0% 15% 0% 15%;">
+
+    <div class="contener-fluid" style="margin: 0% 15% 0% 15%;">
   <div class="card mb-2 mt-2" style="width: 100%; ">
     @foreach ($data as $data)
     <div class="card-body">
@@ -95,6 +106,8 @@
   </div>
 
 </div>
+@endauth
+
 @endsection
 @section('js')
 <script type="text/javascript">

@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Contact;
 use App\Models\Property;
 use App\Models\Lists;
+use App\Models\About;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -73,6 +74,24 @@ class AdminController extends Controller
     public function deletecontact($id)
      {
          $data=Contact::find($id);
+         $data->delete();
+         return redirect()->back();
+     }
+     public function admin_about(){
+        $data=About::all();
+        return view("admin.about", compact("data"));
+    }
+    public function admin_aboutUpload(Request $request)
+     {
+         $user = new About;
+          $user->aboutUs=$request->aboutUs;
+          $user->whatWeDo=$request->whatWeDo;
+          $user->save();
+          return redirect()->back(); 
+     }
+     public function deleteadminabout($id)
+     {
+         $data=About::find($id);
          $data->delete();
          return redirect()->back();
      }

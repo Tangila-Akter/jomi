@@ -17,6 +17,33 @@
             <link rel='stylesheet' id='e-animations-css'
                 href='{{ asset("user/wp-content/plugins/elementor/assets/lib/animations/animations.min007f.css?ver=3.10.2")}}'
                 media='all' />
+                {{-- search Auto compelete --}}
+                <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+                <script>  
+                      
+                      var Property = [  
+                           
+                      ];  
+                      $.ajax({
+               type:'GET',
+               url:'/product_list',
+               success:function(response) {
+                    // console.log(response);
+                    startAutoComplete(response);
+                  
+               }
+            });
+            function startAutoComplete(availableTags)
+            {
+                $( "#search_property" ).autocomplete({  
+                        source: Property  
+                      }); 
+            }
+                      
+                     
+                    </script>  
+                {{-- search Auto compelete --}}
             <script id='astra-theme-js-js-extra'>
                 var astra = {
                     "break_point": "921",

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Home;
 use App\Models\Contact;
 use App\Models\Property;
@@ -53,7 +54,7 @@ class HomeController extends Controller
                 $data=Property::all();
                 
             }
-            return view("user.home", compact("search"));
+            return view("user.home", compact("search", "data"));
             }
             else
             {
@@ -83,7 +84,11 @@ class HomeController extends Controller
         }
         
     }
+    public function user_about(){
 
+        $data = DB::table('abouts')->orderBy('id', 'desc')->limit(1)->get();
+        return view("user.user_about", compact("data"));
+    }
     public function contact(){
         return view("user.contact");
     }
@@ -101,17 +106,18 @@ class HomeController extends Controller
         return redirect()->back();
     }
     public function cost(){
-        if(Auth::Id()){
-        $user_id = Auth::user()->id;
-        $data=Property::where('user_id', $user_id)->get();
-        return view("user.post", compact("data"));
-    }
-    else{
-        return redirect('/login');
-    }
+        // if(Auth::Id()){
+        // $user_id = Auth::user()->id;
+        // $data=Property::where('user_id', $user_id)->get();
+        return view("user.post");
+    // }
+    // else{
+    //     return redirect('/login');
+    // }
     }
     
-    public function upload_post(Request $request,$id){
+    
+    public function upload_post(Request $request){
 
         if (Auth::Id()) {
             $data = new Property;
@@ -143,7 +149,20 @@ class HomeController extends Controller
             $data=Property::all();
             
         }
-        return view("user.list", compact("data","search"));
+
+        $option = $request['option'] ?? "";
+        
+        if($option != ""){
+            $data=Property::where('type', 'LIKE', "%$option%")->get();
+        }else{
+            $data=Property::all();
+            
+        }
+        // $rent = 'rent';
+        // $buy = 'buy';
+        // $sell = 'sell';
+        // $option = $data=Property::where('type', 'LIKE', "%$rent%")->orWhere('type', 'LIKE', "%$buy%")->orWhere('type', 'LIKE', "%$sell%")->get();
+        return view("user.list", compact("data","search", "option"));
     }
     public function addcart(Request $request,$id)
     {
@@ -165,5 +184,36 @@ class HomeController extends Controller
         {
             return redirect('/login');
         }
+    }
+    public function addcarthome(Request $request,$id)
+    {
+        if(Auth::Id())
+        {
+            $user_id=Auth::Id();
+            $postid=$id;
+            $data= new lists;
+            $data->user_id=$user_id;
+            $data->post_id=$postid;
+            $data->user_id = $request->user_id;
+            $data->user_email = $request->user_email;
+            $data->user_name = $request->user_name;
+            $data->save();
+
+            return redirect()->back();
+        }
+        else
+        {
+            return redirect('/login');
+        }
+    }
+    public function productlist(){
+        $property = Property::where('title')->orWhere('type')->orWhere('user_name')->get();
+        $data = [];
+
+        foreach( $property as $property){
+            $data[] = $property['title' && 'type' && 'user_name'];
+            // $data = $property['title', 'type'];
+        }
+        return $data;
     }
 }
