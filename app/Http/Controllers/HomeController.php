@@ -69,6 +69,7 @@ class HomeController extends Controller
     }
     public function index(Request $request){
         if(Auth::id()){
+            
             return redirect('home');
         }
         else{
@@ -79,7 +80,7 @@ class HomeController extends Controller
                 $data=Property::all();
                 
             }
-            return view("user.home", compact("search"));
+            return view("user.home", compact("search", "data"));
             
         }
         
