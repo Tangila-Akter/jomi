@@ -184,6 +184,17 @@
                                     </div>
                                 </div>
                             </section>
+                            @if(session()->has('message'))
+
+<div class="alert alert-success">
+
+ 
+  
+  {{session()->get('message')}}
+  
+</div>
+
+@endif
                             <section
                                 class="elementor-section elementor-top-section elementor-element elementor-element-93dc533 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
                                 data-id="93dc533" data-element_type="section">
@@ -196,10 +207,10 @@
                                                 data-widget_type="wpr-search.default">
                                                 <div class="elementor-widget-container">
 
-                                                    <form role="search"
+                                                    <form role="search" method="get"
                                                         class="wpr-search-form"
                                                         action="">
-                                                        
+                                                        @csrf
                                                         <div
                                                             class="wpr-search-form-input-wrap elementor-clearfix">
                                                             <input
@@ -227,33 +238,33 @@
                                                         <span class="wpr-close-search"></span>
                                                         <ul></ul>
                                                     </div>
-                                                    {{-- <div class="contener-fluid" style="margin: 0% 15% 0% 15%;">
-                                                        <div class="card mb-2 mt-2" style="width: 100%; ">
-                                                          @foreach ($data as $data)
-                                                          <form action="{{ url('/addcarthome',$data->id) }}" method="post" enctype="multipart/form-data">
-                                                            @csrf
-                                                          <div class="card-body">
-                                                          <div class="row">
-                                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                                              <img src="post/{{ $data->image }}" alt="" style="width: 100%; height: 16rem;">
-                                                            </div>
-                                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                                              <h1 style="font-size: 30px;font-weight: 400;" name="title"> <b>{{$data->title }}</b></h1>
-                                                              <p name="details" value="{{ $data->details }} ">{{ $data->details }} </p>
-                                                      
-                                                              <p class="mb-2 mt-2" name="price" value="{{ $data->price }}"><b>Price:</b>{{ $data->price }} ৳</p>
-                                                              <span name="postuser_name">Posted by <b>{{ $data->user_name }}</b></span>
-                                                              <input type="hidden" name="user_id" @auth value="{{Auth::user()->id}}" @endauth>
-                                                                  <input type="hidden" name="user_email" @auth value="{{Auth::user()->email}}" @endauth>
-                                                                  <input type="hidden" name="user_name" @auth value="{{Auth::user()->name}}" @endauth>
-                                                              <div class="mb-6" style="margin-top: 7px;">
-                                                                <button type="submit" class="btn btn-primary" name="type" style="background-color: #0d6efd;" >{{ $data->type }} now</button>
-                                                              </div>
-                                                            </div>
-                                                          </form>
-                                                          </div>
-                                                          </div>
-                                                          @endforeach --}}
+<div class="contener-fluid" style="margin: 0% 15% 0% 15%;">
+                            <div class="card mb-2 mt-2" style="width: 100%; ">
+                              @foreach ($data as $data)
+                              <form action="{{ url('/addcart',$data->id) }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                              <div class="card-body">
+                              <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                  <img src="post/{{ $data->image }}" alt="" style="width: 100%; height: 16rem;">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                  <h1 style="font-size: 30px;font-weight: 400;" name="title"> <b>{{$data->title }}</b></h1>
+                                  <p name="details" value="{{ $data->details }} ">{{ $data->details }} </p>
+                          
+                                  <p class="mb-2 mt-2" name="price" value="{{ $data->price }}"><b>Price:</b>{{ $data->price }} ৳</p>
+                                  <span name="postuser_name">Posted by <b>{{ $data->user_name }}</b></span>
+                                  <input type="hidden" name="user_id" @auth value="{{Auth::user()->id}}" @endauth>
+                                      <input type="hidden" name="user_email" @auth value="{{Auth::user()->email}}" @endauth>
+                                      <input type="hidden" name="user_name" @auth value="{{Auth::user()->name}}" @endauth>
+                                  <div class="mb-6" style="margin-top: 7px;">
+                                    <button type="submit" class="btn btn-primary" name="type" style="background-color: #0d6efd;" >{{ $data->type }} now</button>
+                                  </div>
+                                </div>
+                              </form>
+                              </div>
+                              </div>
+                              @endforeach
                                                 </div>
                                                 
                                         </div>

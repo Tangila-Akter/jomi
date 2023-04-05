@@ -52,7 +52,7 @@
                                                 }
                                             </style>
                                             <p>Copyright &amp;copy
-                                                <!--?php echo date("Y");?-->, <a href="index.html">Jomi
+                                                <!--?php echo date("Y");?-->, <a href="https://jomikhoj.com">Jomi
                                                     Khoj</a>, All Rights Reserved.
                                             </p>
                                         </div>

@@ -69,6 +69,7 @@ class HomeController extends Controller
     }
     public function index(Request $request){
         if(Auth::id()){
+            
             return redirect('home');
         }
         else{
@@ -79,7 +80,7 @@ class HomeController extends Controller
                 $data=Property::all();
                 
             }
-            return view("user.home", compact("search"));
+            return view("user.home", compact("search", "data"));
             
         }
         
@@ -106,14 +107,14 @@ class HomeController extends Controller
         return redirect()->back();
     }
     public function cost(){
-        // if(Auth::Id()){
-        // $user_id = Auth::user()->id;
-        // $data=Property::where('user_id', $user_id)->get();
-        return view("user.post");
-    // }
-    // else{
-    //     return redirect('/login');
-    // }
+        if(Auth::Id()){
+        $user_id = Auth::user()->id;
+        $data=Property::where('user_id', $user_id)->get();
+        return view("user.post", compact("data"));
+    }
+    else{
+        return redirect('/login');
+    }
     }
     
     
@@ -139,6 +140,24 @@ class HomeController extends Controller
         {
             return redirect('/login');
         }
+    }
+    public function upload( Request $request)
+    {
+        $data = new Property;
+        $image=$request->image;
+         $imagename=time().'.'.$image->getClientOriginalExtension() ;
+         $request->image->move('post',$imagename);
+         $data->image=$imagename;
+         $data->title = $request->title;
+         $data->price = $request->price;
+         $data->type = $request->type;
+         $data->details = $request->details;
+         $data->user_id = $request->user_id;
+         $data->user_email = $request->user_email;
+         $data->user_name = $request->user_name;
+        $data->save();
+
+        return redirect()->back()->with('message', 'Post Added Successfully');
     }
     public function list(Request $request){
         $search = $request['search'] ?? "";
@@ -178,7 +197,7 @@ class HomeController extends Controller
             $data->user_name = $request->user_name;
             $data->save();
 
-            return redirect()->back();
+            return redirect()->back()->with('message', 'Your request has been sent. We will contact you soon.');
         }
         else
         {

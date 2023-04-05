@@ -125,7 +125,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-487379d"
+                                        {{-- <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-487379d"
                                             data-id="487379d" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="elementor-element elementor-element-57e9e85 elementor-align-center elementor-tablet-align-center elementor-mobile-align-right elementor-widget elementor-widget-button"
@@ -144,7 +144,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </section>
                             </div>

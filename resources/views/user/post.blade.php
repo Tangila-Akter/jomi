@@ -37,7 +37,7 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
         </div>
-        <form action="{{ url('upload_post') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ url('upload') }}" method="post" enctype="multipart/form-data">
             @csrf
         <div class="modal-body">
           <div class="mb-3">

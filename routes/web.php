@@ -27,7 +27,7 @@ Route::post("/upload_contact", [HomeController::class, "upload_contact"]);
 Route::get("/user_about", [HomeController::class, "user_about"]);
 // Route::get("/post", [HomeController::class, "post"]);
 Route::get("/list", [HomeController::class, "list"]);
-Route::post("/upload_post/{id}", [HomeController::class, "upload_post"]);
+Route::post("/upload", [HomeController::class, "upload"]);
 Route::post("/addcart/{id}", [HomeController::class, "addcart"]);
 Route::post("/addcarthome/{id}", [HomeController::class, "addcarthome"]);
 Route::get("/product_list", [HomeController::class, "productlist"]);
