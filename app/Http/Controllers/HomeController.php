@@ -104,7 +104,7 @@ class HomeController extends Controller
 
         
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Your message has been sent. We will contact you soon.');
     }
     public function cost(){
         if(Auth::Id()){
