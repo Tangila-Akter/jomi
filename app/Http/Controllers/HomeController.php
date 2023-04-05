@@ -6,7 +6,7 @@ use App\Models\About;
 use App\Models\Home;
 use App\Models\Contact;
 use App\Models\Property;
-use App\Models\Cart;
+use App\Models\User;
 use App\Models\Lists;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -58,7 +58,11 @@ class HomeController extends Controller
             }
             else
             {
-                return view('admin.home');
+                $user = User::all();;
+                $list = Property::all();
+                $qeury = Lists::all();
+                $contact = Contact::all();
+                return view('admin.home', compact("user", "list", "qeury", "contact"));
             }
         }
         else

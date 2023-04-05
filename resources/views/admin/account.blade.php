@@ -1,10 +1,8 @@
 <x-app-layout></x-app-layout>
 @extends('admin.includes.main')
 @section('content')
-<div class="row ">
-    <div class="col-12 grid-margin">
-      <div class="card">
-        <div class="card-body">
+<div class="main-panel">
+  <div class="content-wrapper">
 <h4 class="card-title">Account Status</h4><br>
 <div style="position: relative; top:20px; right:4px;">
     <!-- Button admin add modal -->
@@ -61,8 +59,9 @@
   <br><br>
 
 
-                    <div class="table-responsive">
-                      <table class="table">
+  <div class="content-wrapper">
+    <div class="table-responsive">
+      <table class="table">
                         <thead>
                           <tr>
                             <th>ID</th>

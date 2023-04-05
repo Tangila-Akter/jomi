@@ -11,6 +11,8 @@
 </style>
 
 @section('content')
+<br>
+<br><br><br>
 @if(session()->has('message'))
 
 <div class="alert alert-success">
@@ -32,7 +34,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Phone number</label>
-    <input type="phone" name="phone" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number.." required>
+    <input type="phone" name="phone" maxlength="13" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number.." required>
   </div>
 <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Email address</label>
