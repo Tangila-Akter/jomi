@@ -112,12 +112,12 @@ class HomeController extends Controller
     }
     public function cost(){
         if(Auth::Id()){
-        $user_id = Auth::user()->id;
-        $data=Property::where('user_id', $user_id)->get();
+         $user_id = Auth::user()->id;
+         $data=Property::where('user_id', $user_id)->get();
         return view("user.post", compact("data"));
     }
     else{
-        return redirect('/login');
+        return view("user.post_view");
     }
     }
     

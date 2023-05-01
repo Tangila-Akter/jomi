@@ -23,6 +23,7 @@ Route::get('/home',[HomeController::class,'redirect'])->middleware('auth','verif
 
 Route::get("/contact", [HomeController::class, "contact"]);
 Route::get("/user_post", [HomeController::class, "cost"]);
+Route::get("/user_post_view", [HomeController::class, "post"]);
 Route::post("/upload_contact", [HomeController::class, "upload_contact"]);
 Route::get("/user_about", [HomeController::class, "user_about"]);
 // Route::get("/post", [HomeController::class, "post"]);
