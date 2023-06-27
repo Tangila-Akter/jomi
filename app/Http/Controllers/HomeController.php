@@ -51,7 +51,7 @@ class HomeController extends Controller
             if($search != ""){
                 $data=Property::where('title', 'LIKE', "%$search%")->orWhere('type', 'LIKE', "%$search%")->orWhere('user_name', 'LIKE', "%$search%")->get();
             }else{
-                $data=Property::all();
+                $data=Property::orderBy('id', 'desc')->get();
                 
             }
             return view("user.home", compact("search", "data"));
@@ -79,9 +79,9 @@ class HomeController extends Controller
         else{
             $search = $request['search'] ?? "";
             if($search != ""){
-                $data=Property::where('title', 'LIKE', "%$search%")->orWhere('type', 'LIKE', "%$search%")->orWhere('user_name', 'LIKE', "%$search%")->get();
+                $data=Property::where('title', 'LIKE', "%$search%")->orWhere('type', 'LIKE', "%$search%")->orWhere('user_name', 'LIKE', "%$search%")->orderBy('id', 'desc')->get();
             }else{
-                $data=Property::all();
+                $data=Property::orderBy("id", "desc")->get();
                 
             }
             return view("user.home", compact("search", "data"));
@@ -113,7 +113,7 @@ class HomeController extends Controller
     public function cost(){
         if(Auth::Id()){
          $user_id = Auth::user()->id;
-         $data=Property::where('user_id', $user_id)->get();
+         $data=Property::where('user_id', $user_id)->orderBy('id', 'desc')->get();
         return view("user.post", compact("data"));
     }
     else{
@@ -122,29 +122,29 @@ class HomeController extends Controller
     }
     
     
-    public function upload_post(Request $request){
+    // public function upload_post(Request $request){
 
-        if (Auth::Id()) {
-            $data = new Property;
-            $image = $request->image;
-            $imagename = time() . '.' . $image->getClientOriginalExtension();
-            $request->image->move('post', $imagename);
-            $data->image = $imagename;
-            $data->title = $request->title;
-            $data->price = $request->price;
-            $data->type = $request->type;
-            $data->details = $request->details;
-            $data->user_id = $request->user_id;
-            $data->user_email = $request->user_email;
-            $data->user_name = $request->user_name;
-            $data->save();
-            return redirect()->back()->with('message', 'Post Added Successfully');
-        }
-        else
-        {
-            return redirect('/login');
-        }
-    }
+    //     if (Auth::Id()) {
+    //         $data = new Property;
+    //         $image = $request->image;
+    //         $imagename = time() . '.' . $image->getClientOriginalExtension();
+    //         $request->image->move('post', $imagename);
+    //         $data->image = $imagename;
+    //         $data->title = $request->title;
+    //         $data->price = $request->price;
+    //         $data->type = $request->type;
+    //         $data->details = $request->details;
+    //         $data->user_id = $request->user_id;
+    //         $data->user_email = $request->user_email;
+    //         $data->user_name = $request->user_name;
+    //         $data->save();
+    //         return redirect()->back()->with('message', 'Post Added Successfully');
+    //     }
+    //     else
+    //     {
+    //         return redirect('/login');
+    //     }
+    // }
     public function upload( Request $request)
     {
         $data = new Property;
@@ -156,6 +156,13 @@ class HomeController extends Controller
          $data->price = $request->price;
          $data->type = $request->type;
          $data->details = $request->details;
+         $data->district = $request->district;
+         $data->thana = $request->thana;
+         $data->village = $request->village;
+         $data->road = $request->road;
+         $data->mouja = $request->mouja;
+         $data->khotian = $request->khotian;
+         $data->daag = $request->daag;
          $data->user_id = $request->user_id;
          $data->user_email = $request->user_email;
          $data->user_name = $request->user_name;
@@ -167,18 +174,18 @@ class HomeController extends Controller
         $search = $request['search'] ?? "";
         
         if($search != ""){
-            $data=Property::where('title', 'LIKE', "%$search%")->orWhere('type', 'LIKE', "%$search%")->orWhere('user_name', 'LIKE', "%$search%")->get();
+            $data=Property::where('title', 'LIKE', "%$search%")->orWhere('type', 'LIKE', "%$search%")->orWhere('user_name', 'LIKE', "%$search%")->orderBy('id', 'desc')->get();
         }else{
-            $data=Property::all();
+            $data=Property::orderBy('id', 'desc')->get();
             
         }
 
         $option = $request['option'] ?? "";
         
         if($option != ""){
-            $data=Property::where('type', 'LIKE', "%$option%")->get();
+            $data=Property::where('type', 'LIKE', "%$option%")->orderBy('id', 'desc')->get();
         }else{
-            $data=Property::all();
+            $data=Property::orderBy('id', 'desc')->get();
             
         }
         // $rent = 'rent';

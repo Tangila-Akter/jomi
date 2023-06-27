@@ -1,7 +1,4 @@
-<x-app-layout>
 
-  
-</x-app-layout>
 @extends('admin.includes.main')
 
 @section('content')

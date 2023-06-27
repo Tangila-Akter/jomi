@@ -44,25 +44,65 @@
         <div class="modal-body">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Property title</label>
-            <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Property title">
+            <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Property title" require>
           </div>
             <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Image:</label>
-                <input name="image" class="form-control" type="file" id="formFileMultiple" multiple>
+                <input name="image" class="form-control" type="file" id="formFileMultiple" require>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Property price</label>
-                <input type="text" name="price" class="form-control" id="exampleFormControlInput1" placeholder="Property Price">
+                <input type="text" name="price" class="form-control" id="exampleFormControlInput1" placeholder="Property Price" require>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Property for</label>
-                <select id="" name="type" class="form-control">
+                <select id="" name="type" class="form-control" require>
                   <option >--Select option--</option>
                   <option value="sell">Sell</option>
                   <option value="buy">Buy</option>
                   <option value="rent">Rent</option>
                 </select>
               </div>
+              <div class="mb-3">
+              <div class="row">
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="exampleFormControlInput1" class="form-label">District <span class="text-danger">*</span></label>
+                          <input type="text" name="district" class="form-control" id="exampleFormControlInput1" placeholder="District" require>
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="exampleFormControlInput1" class="form-label">Sub-District / Thana / Circle <span class="text-danger">*</span></label>
+                          <input type="text" name="thana" class="form-control" id="exampleFormControlInput1" placeholder="Sub-District / Thana / Circle" require>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+              <div class="row">
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="exampleFormControlInput1" class="form-label">Village / Area Name</label>
+                          <input type="text" name="village" class="form-control" id="exampleFormControlInput1" placeholder="Village / Area Name">
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="exampleFormControlInput1" class="form-label">Road No</label>
+                          <input type="text" name="road" class="form-control" id="exampleFormControlInput1" placeholder="Road No">
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+              <div class="row">
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="exampleFormControlInput1" class="form-label">Mouja</label>
+                          <input type="text" name="mouja" class="form-control" id="exampleFormControlInput1" placeholder="Mouja">
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="exampleFormControlInput1" class="form-label">Khotian No</label>
+                          <input type="text" name="khotian" class="form-control" id="exampleFormControlInput1" placeholder="Khotian No">
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Daag No</label>
+            <input type="text" name="daag" class="form-control" id="exampleFormControlInput1" placeholder="Daag No">
+          </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Property Details:</label>
                 <textarea class="form-control" name="details" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -90,7 +130,7 @@
     <div class="card-body">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-        <img src="post/{{ $data->image }}" alt="" style="width: 100%; height: 16rem;">
+        <img src="post/{{ $data->image }}" alt="" style="width: 100%; height: 20rem;">
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <h1 style="font-size: 30px;font-weight: 400;"> <b>{{$data->title }}</b></h1>

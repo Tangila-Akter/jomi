@@ -20,6 +20,13 @@ return new class extends Migration
             $table->string('price')->nullable();
             $table->string('type')->nullable();
             $table->string('details')->nullable();
+            $table->string('district')->nullable();
+            $table->string('thana')->nullable();
+            $table->string('village')->nullable();
+            $table->string('road')->nullable();
+            $table->string('mouja')->nullable();
+            $table->string('khotian')->nullable();
+            $table->string('daag')->nullable();
             $table->string('user_id')->nullable();
             $table->string('user_email')->nullable();
             $table->string('user_name')->nullable();

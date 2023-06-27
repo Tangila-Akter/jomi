@@ -100,9 +100,7 @@
                                                     <img decoding="async" width="1006" height="529"
                                                         src="{{ asset('user/wp-content/uploads/2023/01/Buy_a_home.webp')}}"
                                                         class="attachment-large size-large wp-image-82"
-                                                        alt="" loading="lazy"
-                                                        srcset="https://jomikhoj.com/wp-content/uploads/2023/01/Buy_a_home.webp 1006w, https://jomikhoj.com/wp-content/uploads/2023/01/Buy_a_home-300x158.webp 300w, https://jomikhoj.com/wp-content/uploads/2023/01/Buy_a_home-768x404.webp 768w"
-                                                        sizes="(max-width: 1006px) 100vw, 1006px" />
+                                                         />
                                                 </div>
                                             </div>
                                             
@@ -129,9 +127,7 @@
                                                     <img decoding="async" width="1006" height="529"
                                                         src="{{ asset('user/wp-content/uploads/2023/01/Sell_a_home.webp')}}"
                                                         class="attachment-large size-large wp-image-83"
-                                                        alt="" loading="lazy"
-                                                        srcset="https://jomikhoj.com/wp-content/uploads/2023/01/Sell_a_home.webp 1006w, https://jomikhoj.com/wp-content/uploads/2023/01/Sell_a_home-300x158.webp 300w, https://jomikhoj.com/wp-content/uploads/2023/01/Sell_a_home-768x404.webp 768w"
-                                                        sizes="(max-width: 1006px) 100vw, 1006px" />
+                                                         />
                                                 </div>
                                             </div>
                                             <section
@@ -166,9 +162,7 @@
                                                     <img decoding="async" width="1006" height="529"
                                                         src="{{ asset('user/wp-content/uploads/2023/01/Rent_a_home.webp')}}"
                                                         class="attachment-large size-large wp-image-84"
-                                                        alt="" loading="lazy"
-                                                        srcset="https://jomikhoj.com/wp-content/uploads/2023/01/Rent_a_home.webp 1006w, https://jomikhoj.com/wp-content/uploads/2023/01/Rent_a_home-300x158.webp 300w, https://jomikhoj.com/wp-content/uploads/2023/01/Rent_a_home-768x404.webp 768w"
-                                                        sizes="(max-width: 1006px) 100vw, 1006px" />
+                                                         />
                                                 </div>
                                             </div>
                                             <section

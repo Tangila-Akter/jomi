@@ -1,9 +1,13 @@
+@extends('user.include.main')
+@section('content')
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="card" style="width: 60%; margin:5% 20% 5% 20%; ">
+<form method="POST" action="{{ route('register') }}" style="background-color: #ebf6ff !important; padding:2% 22% 2% 22%;" class="">
         @csrf
-
-        <!-- Name -->
-        <div>
+<!-- Name -->
+<div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
@@ -40,13 +44,17 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}" style="margin-right: 2%;">
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ml-4">
+            <x-primary-button  class="btn btn-primary">
                 {{ __('Register') }}
             </x-primary-button>
         </div>
+        
     </form>
+</div>
+
 </x-guest-layout>
+@endsection

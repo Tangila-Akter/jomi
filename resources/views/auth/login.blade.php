@@ -1,8 +1,13 @@
+@extends('user.include.main')
+@section('content')
 <x-guest-layout>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="card" style="width: 60%; margin:5% 20% 5% 20%; ">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('login') }}" style="background-color: #ebf6ff !important; padding:2% 22% 2% 22%;">
         @csrf
 
         <!-- Email Address -->
@@ -33,15 +38,18 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
+            
+                <!--<a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ url('/') }}" style="margin-right: 2%;">-->
+                <!--    {{ __('Go Back') }}-->
+                <!--</a>-->
+           
 
-            <x-primary-button class="ml-3">
+            <x-primary-button class="btn btn-primary">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
     </form>
+</div>
 </x-guest-layout>
+
+@endsection

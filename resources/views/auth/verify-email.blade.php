@@ -1,5 +1,11 @@
+@extends('user.include.main')
+@section('content')
 <x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="card" style="width: 60%; margin:5% 20% 5% 20%; ">
+    <div style="background-color: #ebf6ff !important; padding:2% 22% 2% 22%;">
+        <div class="mb-4 text-sm text-gray-600 dark:text-gray-400" >
         {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
     </div>
 
@@ -14,7 +20,7 @@
             @csrf
 
             <div>
-                <x-primary-button>
+                <x-primary-button class="btn btn-primary">
                     {{ __('Resend Verification Email') }}
                 </x-primary-button>
             </div>
@@ -28,4 +34,7 @@
             </button>
         </form>
     </div>
+    </div>
+</div>
 </x-guest-layout>
+@endsection

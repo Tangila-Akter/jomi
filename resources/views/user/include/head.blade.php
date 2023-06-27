@@ -3,6 +3,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <title>Jomi Khoj</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('user/wp-content/uploads/2023/01/logo.webp')}}">
     <meta name='robots' content='max-image-preview:large' />
     <link rel="alternate" type="application/rss+xml" title="Jomi Khoj &raquo; Feed" href="{{ asset('user/index.php/feed/index.html')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">

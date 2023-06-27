@@ -52,9 +52,24 @@
                                                                 @if (Route::has('login'))
                                                                 @auth
                                                                         <li
-                                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
+                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35">
+                                                                <!--            <form method="POST" action="{{ route('logout') }}">-->
+                                                                <!--        @csrf-->
+                                                                <!--        <div class="">-->
+                                                                <!--<a href=""{{ route('logout') }}""-->
+                                                                <!--        class="wpr-menu-item wpr-pointer-item menu-link" onclick="event.preventDefault();-->
+                                                                <!--                        this.closest('form').submit(); " role="button" >{{ __('Log Out') }}</a>-->
                                                                         
-                                                                        <a class="" ><x-app-layout></x-app-layout></a></li>
+                                                                <!--        </div>-->
+                                                                <!--        </form>-->
+                                                                <form method="POST" action="{{ route('logout') }}">
+            @csrf
+
+            <button type="submit" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
+                {{ __('Log Out') }}
+            </button>
+        </form>
+                                                                </li>
                                                                         @else
                                                     
                                                                             @if (Route::has('register'))
@@ -68,7 +83,7 @@
                                                                         @endif
                                                             </ul>
                                                         </nav>
-                                                        <nav class="wpr-mobile-nav-menu-container">
+                                                        <nav class="wpr-mobile-nav-menu-container" style="z-index: 999;position: absolute;">
                                                             <div class="wpr-mobile-toggle-wrap">
                                                                 <div class="wpr-mobile-toggle"><span
                                                                         class="wpr-mobile-toggle-line"></span><span
@@ -106,8 +121,14 @@
                                                                 @auth
                                                                         <li
                                                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
-                                                                        
-                                                                        <a class="" ><x-app-layout></x-app-layout></a></li>
+                                                                        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+
+            <button type="submit" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
+                {{ __('Log Out') }}
+            </button>
+        </form>
+                                                                        </li>
                                                                         @else
                                                     
                                                                             @if (Route::has('register'))
